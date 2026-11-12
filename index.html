@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="فروشگاه آنلاین سپید؛ انتخابی ساده برای خرید محصولات باکیفیت و زیبا.">
+  <title>سپید | فروشگاه آنلاین</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #20231f;
+      --muted: #777d75;
+      --green: #46694e;
+      --green-dark: #35523b;
+      --mint: #edf3ec;
+      --line: #e9ece8;
+      --cream: #f7f8f5;
+      --white: #fff;
+      --shadow: 0 16px 40px rgba(32, 45, 33, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--white); font-family: 'Vazirmatn', Tahoma, sans-serif; line-height: 1.7; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { background: var(--green); color: white; text-align: center; padding: 8px 16px; font-size: 12px; }
+    header { background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; backdrop-filter: blur(12px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 9px; font-size: 23px; font-weight: 800; letter-spacing: -.8px; }
+    .brand-mark { width: 35px; height: 35px; display: grid; place-items: center; border-radius: 12px; color: white; background: var(--green); font-size: 18px; }
+    .links { display: flex; gap: 30px; color: #555b54; font-size: 14px; }
+    .links a:hover { color: var(--green); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .icon-button { position: relative; border: 1px solid var(--line); background: white; color: var(--ink); border-radius: 12px; width: 42px; height: 42px; display: grid; place-items: center; font-size: 18px; }
+    .icon-button:hover { background: var(--cream); }
+    .cart-count { position: absolute; top: -5px; left: -5px; min-width: 18px; height: 18px; padding: 0 4px; background: var(--green); color: white; border-radius: 20px; font-size: 10px; display: grid; place-items: center; }
+    .menu-toggle { display: none; }
+    .hero { padding: 44px 0 32px; }
+    .hero-panel { min-height: 430px; position: relative; overflow: hidden; border-radius: 28px; background: #f1f4ef; display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+    .hero-copy { padding: 48px 8.5% 48px 5%; position: relative; z-index: 2; }
+    .eyebrow { color: var(--green); font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    .eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--green); }
+    h1 { font-size: clamp(32px, 4vw, 51px); line-height: 1.45; margin: 14px 0 12px; letter-spacing: -1.5px; }
+    .hero-copy p { color: var(--muted); font-size: 15px; max-width: 430px; margin: 0 0 26px; }
+    .button { background: var(--green); color: white; border: 0; padding: 12px 23px; border-radius: 12px; display: inline-flex; align-items: center; gap: 10px; font-weight: 600; transition: .2s; }
+    .button:hover { background: var(--green-dark); transform: translateY(-2px); }
+    .hero-art { align-self: stretch; position: relative; display: grid; place-items: center; }
+    .hero-art::before { content: ''; position: absolute; width: 340px; height: 340px; border-radius: 50%; background: #dce7dc; }
+    .hero-art img { width: 78%; height: 88%; object-fit: cover; border-radius: 48% 48% 24px 24px; position: relative; z-index: 1; box-shadow: var(--shadow); }
+    .hero-note { position: absolute; z-index: 2; bottom: 42px; left: 8%; background: white; padding: 12px 17px; border-radius: 14px; box-shadow: var(--shadow); font-size: 12px; }
+    .hero-note strong { display: block; font-size: 15px; }
+    .benefits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 22px 0 58px; }
+    .benefit { display: flex; align-items: center; gap: 12px; padding: 16px; border: 1px solid var(--line); border-radius: 15px; }
+    .benefit-icon { flex: 0 0 42px; height: 42px; display: grid; place-items: center; background: var(--mint); border-radius: 13px; font-size: 19px; }
+    .benefit strong { display: block; font-size: 13px; }
+    .benefit span:last-child { color: var(--muted); font-size: 11px; }
+    section { scroll-margin-top: 95px; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+    .section-heading h2 { font-size: 25px; margin: 0; letter-spacing: -.5px; }
+    .section-heading p { color: var(--muted); margin: 3px 0 0; font-size: 13px; }
+    .text-link { color: var(--green); font-size: 13px; font-weight: 700; }
+    .categories { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 62px; }
+    .category { min-height: 190px; padding: 20px; border-radius: 19px; position: relative; overflow: hidden; background: var(--cream); display: flex; align-items: end; transition: .2s; }
+    .category:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .category img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .78; transition: .3s; }
+    .category::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20,30,22,.58), transparent 70%); }
+    .category:hover img { transform: scale(1.05); }
+    .category-label { position: relative; z-index: 1; color: white; font-size: 17px; font-weight: 700; }
+    .products-section { padding-bottom: 68px; }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .filter { border: 1px solid var(--line); background: white; color: #62685f; border-radius: 30px; padding: 8px 17px; font-size: 12px; }
+    .filter.active, .filter:hover { background: var(--green); border-color: var(--green); color: white; }
+    .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .product { border: 1px solid var(--line); border-radius: 17px; overflow: hidden; background: white; transition: .2s; }
+    .product:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .product-image { height: 235px; position: relative; overflow: hidden; background: var(--cream); }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; transition: .35s; }
+    .product:hover .product-image img { transform: scale(1.04); }
+    .badge { position: absolute; top: 12px; right: 12px; background: white; color: var(--green); padding: 4px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; }
+    .favorite { position: absolute; top: 10px; left: 10px; border: 0; border-radius: 50%; width: 34px; height: 34px; background: rgba(255,255,255,.9); font-size: 17px; color: #555; }
+    .favorite.selected { color: #d35656; }
+    .product-info { padding: 14px; }
+    .product-category { color: var(--muted); font-size: 10px; }
+    .product-title { margin: 4px 0 10px; font-size: 14px; font-weight: 600; }
+    .product-bottom { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .price { font-size: 13px; font-weight: 700; white-space: nowrap; }
+    .price del { display: block; color: #a4a8a2; font-size: 10px; font-weight: 400; }
+    .add-button { border: 0; color: white; background: var(--green); width: 35px; height: 35px; border-radius: 10px; font-size: 20px; }
+    .add-button:hover { background: var(--green-dark); }
+    .promo { margin-bottom: 68px; min-height: 240px; padding: 35px 7%; border-radius: 23px; background: #eef3eb; display: flex; justify-content: space-between; align-items: center; overflow: hidden; position: relative; }
+    .promo h2 { font-size: 28px; margin: 8px 0; }
+    .promo p { color: var(--muted); margin: 0 0 19px; font-size: 13px; }
+    .promo img { width: 32%; height: 200px; object-fit: cover; border-radius: 18px; transform: rotate(-3deg); box-shadow: var(--shadow); }
+    .newsletter { background: var(--cream); padding: 38px 20px; text-align: center; border-radius: 20px; margin-bottom: 60px; }
+    .newsletter h2 { margin: 0 0 5px; font-size: 22px; }
+    .newsletter p { margin: 0 0 20px; color: var(--muted); font-size: 13px; }
+    .subscribe-form { display: flex; max-width: 430px; margin: auto; padding: 5px; background: white; border: 1px solid var(--line); border-radius: 13px; }
+    .subscribe-form input { flex: 1; min-width: 0; border: 0; outline: 0; padding: 8px 12px; background: transparent; }
+    .subscribe-form button { border: 0; border-radius: 10px; padding: 9px 17px; background: var(--green); color: white; }
+    footer { border-top: 1px solid var(--line); padding: 36px 0 20px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 30px; padding-bottom: 28px; }
+    .footer-about p { font-size: 12px; color: var(--muted); max-width: 300px; }
+    footer h3 { font-size: 14px; margin: 4px 0 12px; }
+    footer ul { list-style: none; margin: 0; padding: 0; color: var(--muted); font-size: 12px; }
+    footer li { margin: 7px 0; }
+    footer li a:hover { color: var(--green); }
+    .copyright { border-top: 1px solid var(--line); padding-top: 15px; text-align: center; color: var(--muted); font-size: 11px; }
+    .toast { position: fixed; bottom: 22px; right: 50%; transform: translate(50%, 20px); opacity: 0; pointer-events: none; z-index: 50; background: #222820; color: white; border-radius: 12px; padding: 11px 18px; font-size: 13px; transition: .25s; }
+    .toast.show { transform: translate(50%, 0); opacity: 1; }
+    @media (max-width: 850px) {
+      .links { gap: 16px; }
+      .hero-panel { min-height: 370px; }
+      .hero-copy { padding-inline: 7%; }
+      .hero-art::before { width: 260px; height: 260px; }
+      .benefits { grid-template-columns: repeat(2, 1fr); }
+      .products { grid-template-columns: repeat(2, 1fr); }
+      .product-image { height: 250px; }
+      .categories { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(100% - 28px, 1160px); }
+      .topbar { font-size: 10px; }
+      .nav { min-height: 64px; }
+      .brand { font-size: 20px; }
+      .links { display: none; position: absolute; top: 64px; right: 0; left: 0; padding: 12px 20px 20px; background: white; border-bottom: 1px solid var(--line); flex-direction: column; gap: 12px; }
+      .links.open { display: flex; }
+      .menu-toggle { display: grid; }
+      .nav-actions { gap: 7px; }
+      .icon-button { width: 38px; height: 38px; }
+      .hero { padding-top: 20px; }
+      .hero-panel { display: flex; flex-direction: column-reverse; text-align: center; border-radius: 21px; }
+      .hero-art { width: 100%; height: 220px; }
+      .hero-art::before { width: 190px; height: 190px; }
+      .hero-art img { width: 56%; height: 190px; border-radius: 48% 48% 15px 15px; }
+      .hero-note { bottom: 15px; left: 5%; padding: 8px 12px; }
+      .hero-copy { padding: 12px 22px 26px; }
+      .hero-copy .eyebrow { justify-content: center; }
+      h1 { font-size: 30px; margin: 8px 0; }
+      .hero-copy p { font-size: 12px; margin-bottom: 17px; }
+      .button { padding: 10px 18px; font-size: 13px; }
+      .benefits { gap: 8px; padding: 17px 0 43px; }
+      .benefit { padding: 10px; gap: 8px; }
+      .benefit-icon { flex-basis: 34px; height: 34px; font-size: 16px; }
+      .benefit strong { font-size: 11px; }
+      .benefit span:last-child { font-size: 9px; }
+      .section-heading h2 { font-size: 20px; }
+      .section-heading p { font-size: 11px; }
+      .categories { gap: 10px; margin-bottom: 45px; }
+      .category { min-height: 145px; padding: 14px; }
+      .category-label { font-size: 14px; }
+      .products { gap: 10px; }
+      .product-image { height: 175px; }
+      .product-info { padding: 10px; }
+      .product-title { font-size: 12px; }
+      .product-bottom { align-items: end; }
+      .price { font-size: 11px; }
+      .add-button { flex: 0 0 32px; width: 32px; height: 32px; }
+      .promo { min-height: 190px; margin-bottom: 45px; padding: 22px; }
+      .promo h2 { font-size: 21px; }
+      .promo p { font-size: 11px; }
+      .promo img { width: 36%; height: 145px; }
+      .newsletter { margin-bottom: 40px; padding: 28px 15px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+      .footer-about { grid-column: 1 / -1; }
+      .footer-about p { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">ارسال رایگان برای خریدهای بالای ۲ میلیون تومان ✨</div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="صفحه اصلی سپید"><span class="brand-mark">س</span> سپید</a>
+      <nav class="links" id="siteMenu" aria-label="منوی اصلی">
+        <a href="#home">خانه</a><a href="#categories">دسته‌بندی‌ها</a><a href="#products">محصولات</a><a href="#about">درباره ما</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button menu-toggle" id="menuToggle" aria-label="باز کردن منو">☰</button>
+        <button class="icon-button" id="searchButton" aria-label="جستجو">⌕</button>
+        <button class="icon-button" id="cartButton" aria-label="سبد خرید">🛍<span class="cart-count" id="cartCount">۰</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero" id="home">
+      <div class="hero-panel">
+        <div class="hero-copy">
+          <div class="eyebrow">زیبایی در سادگی است</div>
+          <h1>انتخاب‌های خوب،<br>حال خوب می‌سازند.</h1>
+          <p>محصولاتی برای زندگی روزمره؛ باکیفیت، کاربردی و دوست‌داشتنی. خریدی ساده و لذت‌بخش را با سپید تجربه کنید.</p>
+          <a class="button" href="#products">مشاهده محصولات <span>←</span></a>
+        </div>
+        <div class="hero-art">
+          <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=900&q=85" alt="چیدمان مینیمال محصولات خانه" fetchpriority="high">
+          <div class="hero-note"><strong>زندگی ساده‌تر</strong>با انتخاب‌های بهتر</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container benefits" aria-label="مزایای خرید از سپید">
+      <div class="benefit"><span class="benefit-icon">🚚</span><div><strong>ارسال سریع</strong><span>به سراسر ایران</span></div></div>
+      <div class="benefit"><span class="benefit-icon">↩</span><div><strong>ضمانت بازگشت</strong><span>تا ۷ روز پس از خرید</span></div></div>
+      <div class="benefit"><span class="benefit-icon">♧</span><div><strong>تضمین کیفیت</strong><span>با خیال راحت انتخاب کنید</span></div></div>
+      <div class="benefit"><span class="benefit-icon">♡</span><div><strong>پشتیبانی همراه</strong><span>پاسخ‌گوی شما هستیم</span></div></div>
+    </div>
+
+    <section class="container" id="categories">
+      <div class="section-heading"><div><h2>دسته‌بندی‌های محبوب</h2><p>برای هر سلیقه، انتخابی داریم</p></div><a href="#products" class="text-link">همه دسته‌ها ←</a></div>
+      <div class="categories">
+        <a class="category" href="#products"><img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=600&q=80" alt="لوازم خانه" loading="lazy"><span class="category-label">خانه و زندگی</span></a>
+        <a class="category" href="#products"><img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=600&q=80" alt="محصولات مراقبت شخصی" loading="lazy"><span class="category-label">زیبایی و مراقبت</span></a>
+        <a class="category" href="#products"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="ساعت و اکسسوری" loading="lazy"><span class="category-label">اکسسوری</span></a>
+        <a class="category" href="#products"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=600&q=80" alt="محصولات روزمره" loading="lazy"><span class="category-label">سبک زندگی</span></a>
+      </div>
+    </section>
+
+    <section class="container products-section" id="products">
+      <div class="section-heading"><div><h2>منتخب این هفته</h2><p>محبوب‌ترین‌ها را برایتان جدا کرده‌ایم</p></div><a href="#products" class="text-link">مشاهده همه ←</a></div>
+      <div class="filters" aria-label="فیلتر محصولات">
+        <button class="filter active" data-filter="all">همه محصولات</button><button class="filter" data-filter="home">خانه و زندگی</button><button class="filter" data-filter="beauty">زیبایی</button><button class="filter" data-filter="accessory">اکسسوری</button>
+      </div>
+      <div class="products" id="productGrid">
+        <article class="product" data-category="home" data-name="گلدان سرامیکی آوید">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=700&q=80" alt="گلدان سرامیکی آوید" loading="lazy"><span class="badge">پرفروش</span><button class="favorite" aria-label="افزودن به علاقه‌مندی‌ها">♡</button></div>
+          <div class="product-info"><span class="product-category">خانه و زندگی</span><h3 class="product-title">گلدان سرامیکی آوید</h3><div class="product-bottom"><span class="price">۸۹۰,۰۰۰ تومان</span><button class="add-button" aria-label="افزودن گلدان به سبد خرید">+</button></div></div>
+        </article>
+        <article class="product" data-category="beauty" data-name="ست مراقبت پوست آرامش">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=80" alt="ست مراقبت پوست آرامش" loading="lazy"><span class="badge">۱۰٪ تخفیف</span><button class="favorite" aria-label="افزودن به علاقه‌مندی‌ها">♡</button></div>
+          <div class="product-info"><span class="product-category">زیبایی و مراقبت</span><h3 class="product-title">ست مراقبت پوست آرامش</h3><div class="product-bottom"><span class="price"><del>۱,۴۵۰,۰۰۰</del>۱,۳۰۵,۰۰۰ تومان</span><button class="add-button" aria-label="افزودن ست مراقبت پوست به سبد خرید">+</button></div></div>
+        </article>
+        <article class="product" data-category="accessory" data-name="ساعت مینیمال سپهر">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80" alt="ساعت مینیمال سپهر" loading="lazy"><span class="badge">تازه رسیده</span><button class="favorite" aria-label="افزودن به علاقه‌مندی‌ها">♡</button></div>
+          <div class="product-info"><span class="product-category">اکسسوری</span><h3 class="product-title">ساعت مینیمال سپهر</h3><div class="product-bottom"><span class="price">۲,۸۵۰,۰۰۰ تومان</span><button class="add-button" aria-label="افزودن ساعت به سبد خرید">+</button></div></div>
+        </article>
+        <article class="product" data-category="home" data-name="چراغ رومیزی مهتاب">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=80" alt="چراغ رومیزی مهتاب" loading="lazy"><button class="favorite" aria-label="افزودن به علاقه‌مندی‌ها">♡</button></div>
+          <div class="product-info"><span class="product-category">خانه و زندگی</span><h3 class="product-title">چراغ رومیزی مهتاب</h3><div class="product-bottom"><span class="price">۱,۷۹۰,۰۰۰ تومان</span><button class="add-button" aria-label="افزودن چراغ به سبد خرید">+</button></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container promo">
+      <div><div class="eyebrow">پیشنهاد ویژه سپید</div><h2>یک تغییر کوچک،<br>یک حس تازه.</h2><p>برای خرید اول، از ۱۵٪ تخفیف استفاده کنید.</p><a class="button" href="#products">خرید با تخفیف <span>←</span></a></div>
+      <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=700&q=80" alt="فضای آرام و مینیمال خانه" loading="lazy">
+    </section>
+
+    <section class="container newsletter">
+      <h2>از خبرهای خوب باخبر شوید</h2><p>برای اطلاع از محصولات جدید و تخفیف‌های ویژه، عضو خبرنامه سپید شوید.</p>
+      <form class="subscribe-form" id="subscribeForm"><input type="email" placeholder="ایمیل شما" aria-label="ایمیل شما" required><button type="submit">عضویت</button></form>
+    </section>
+  </main>
+
+  <footer id="about">
+    <div class="container footer-grid">
+      <div class="footer-about"><a class="brand" href="#home"><span class="brand-mark">س</span> سپید</a><p>سپید، همراه شما برای انتخاب محصولاتی ساده، باکیفیت و دوست‌داشتنی. تجربه‌ای مطمئن و دلنشین از خرید آنلاین.</p></div>
+      <div><h3>دسترسی سریع</h3><ul><li><a href="#home">صفحه اصلی</a></li><li><a href="#categories">دسته‌بندی‌ها</a></li><li><a href="#products">همه محصولات</a></li></ul></div>
+      <div><h3>راهنمای خرید</h3><ul><li><a href="#about">روش‌های ارسال</a></li><li><a href="#about">بازگشت کالا</a></li><li><a href="#about">سوالات متداول</a></li></ul></div>
+      <div><h3>ارتباط با ما</h3><ul><li>شنبه تا پنجشنبه، ۹ تا ۱۸</li><li>۰۲۱-۱۲۳۴۵۶۷۸</li><li>hello@sepid.shop</li></ul></div>
+    </div>
+    <div class="container copyright">تمامی حقوق این وب‌سایت متعلق به فروشگاه سپید است. © ۱۴۰۴</div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+    }
+    let cartCount = 0;
+    document.querySelectorAll('.add-button').forEach(button => button.addEventListener('click', () => {
+      cartCount += 1;
+      document.getElementById('cartCount').textContent = new Intl.NumberFormat('fa-IR').format(cartCount);
+      showToast('محصول به سبد خرید اضافه شد.');
+    }));
+    document.querySelectorAll('.favorite').forEach(button => button.addEventListener('click', () => {
+      button.classList.toggle('selected');
+      button.textContent = button.classList.contains('selected') ? '♥' : '♡';
+      showToast(button.classList.contains('selected') ? 'به علاقه‌مندی‌ها اضافه شد.' : 'از علاقه‌مندی‌ها حذف شد.');
+    }));
+    document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
+      document.querySelectorAll('.filter').forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
+      document.querySelectorAll('.product').forEach(product => {
+        product.hidden = button.dataset.filter !== 'all' && product.dataset.category !== button.dataset.filter;
+      });
+    }));
+    document.getElementById('menuToggle').addEventListener('click', () => document.getElementById('siteMenu').classList.toggle('open'));
+    document.querySelectorAll('#siteMenu a').forEach(link => link.addEventListener('click', () => document.getElementById('siteMenu').classList.remove('open')));
+    document.getElementById('searchButton').addEventListener('click', () => {
+      const query = prompt('نام محصول موردنظر را وارد کنید:');
+      if (query === null) return;
+      const normalized = query.trim().toLocaleLowerCase('fa');
+      let found = 0;
+      document.querySelectorAll('.product').forEach(product => {
+        const match = !normalized || product.dataset.name.toLocaleLowerCase('fa').includes(normalized);
+        product.hidden = !match;
+        if (match) found++;
+      });
+      document.querySelectorAll('.filter').forEach(item => item.classList.remove('active'));
+      if (!normalized) document.querySelector('.filter[data-filter="all"]').classList.add('active');
+      document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+      if (normalized && !found) showToast('محصولی با این نام پیدا نشد.');
+    });
+    document.getElementById('cartButton').addEventListener('click', () => showToast(cartCount ? `تعداد ${new Intl.NumberFormat('fa-IR').format(cartCount)} محصول در سبد خرید شماست.` : 'سبد خرید شما خالی است.'));
+    document.getElementById('subscribeForm').addEventListener('submit', event => {
+      event.preventDefault();
+      showToast('با موفقیت عضو خبرنامه شدید.');
+      event.target.reset();
+    });
+  </script>
+</body>
+</html>
