@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#46694e">
+  <meta name="description" content="فروشگاه آنلاین سپید؛ انتخابی ساده برای خرید محصولات باکیفیت و زیبا.">
+  <title>سپید | فروشگاه موبایلی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#46694e;--deep:#35523b;--ink:#20231f;--muted:#777d75;--line:#e9ece8;--cream:#f7f8f5;--mint:#edf3ec;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:#fff;color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.75}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(100% - 28px,520px);margin-inline:auto}
+    .notice{background:var(--green);color:white;text-align:center;padding:6px 12px;font-size:11px}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .nav{height:58px;display:flex;align-items:center;gap:10px}.brand{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:800;margin-left:auto}.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--green);color:#fff}.icon{width:38px;height:38px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font-size:17px}.cart{position:relative}.count{position:absolute;top:-5px;left:-5px;min-width:17px;height:17px;padding:0 4px;border-radius:20px;background:var(--green);color:#fff;font-size:10px;display:grid;place-items:center}
+    .search{display:flex;align-items:center;gap:8px;margin:10px 0 0;padding:0 12px;height:42px;border:1px solid var(--line);border-radius:13px;background:var(--cream)}.search input{width:100%;border:0;outline:0;background:transparent;font-size:13px}.search button{border:0;background:none;color:var(--green);font-size:17px}
+    .hero{margin-top:14px;padding:20px 19px;border-radius:21px;background:linear-gradient(135deg,#f1f4ef,#e7eee5);overflow:hidden}.eyebrow{color:var(--green);font-size:12px;font-weight:700}.hero h1{font-size:25px;line-height:1.55;margin:6px 0}.hero p{margin:0 0 14px;color:var(--muted);font-size:12px}.primary{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 17px;border-radius:12px;background:var(--green);color:white;font-weight:600;font-size:13px}.hero-img{width:100%;height:145px;margin-top:16px;border-radius:16px;object-fit:cover;display:block}
+    .perks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0 24px}.perk{display:flex;align-items:center;gap:8px;padding:10px;border:1px solid var(--line);border-radius:13px;font-size:11px}.perk b{display:block;font-size:12px}.perk small{color:var(--muted)}
+    .section-title{display:flex;align-items:end;justify-content:space-between;margin:22px 0 11px}.section-title h2{margin:0;font-size:18px}.section-title span{color:var(--green);font-size:11px;font-weight:700}
+    .categories{display:flex;gap:8px;overflow:auto;padding-bottom:4px;scrollbar-width:none}.categories::-webkit-scrollbar{display:none}.chip{white-space:nowrap;padding:7px 13px;border:1px solid var(--line);border-radius:22px;background:#fff;color:#62685f;font-size:11px}.chip.active{background:var(--green);border-color:var(--green);color:white}
+    .products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product{overflow:hidden;border:1px solid var(--line);border-radius:15px;background:#fff}.product img{display:block;width:100%;height:148px;object-fit:cover;background:var(--cream)}.info{padding:9px}.category{color:var(--muted);font-size:10px}.name{min-height:44px;margin:2px 0 6px;font-size:12px;font-weight:600;line-height:1.8}.buy{display:flex;align-items:center;justify-content:space-between;gap:5px}.price{font-size:11px;font-weight:700}.add{width:32px;height:32px;border:0;border-radius:10px;background:var(--green);color:#fff;font-size:20px}
+    .promo{display:flex;align-items:center;gap:12px;margin:20px 0;padding:15px;border-radius:17px;background:var(--mint)}.promo div{flex:1}.promo h2{margin:3px 0;font-size:16px}.promo p{margin:0;color:var(--muted);font-size:10px}.promo img{width:35%;height:105px;border-radius:13px;object-fit:cover}
+    footer{margin-top:25px;padding:18px 0 85px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}footer b{color:var(--ink)}
+    .bottom-nav{position:fixed;z-index:12;right:0;bottom:0;left:0;padding:7px 12px calc(7px + env(safe-area-inset-bottom));display:flex;justify-content:space-around;background:rgba(255,255,255,.97);border-top:1px solid var(--line);backdrop-filter:blur(12px)}.bottom-nav a{min-width:56px;display:grid;justify-items:center;gap:1px;color:var(--muted);font-size:10px}.bottom-nav a span:first-child{font-size:18px}.bottom-nav a.selected{color:var(--green);font-weight:700}
+    .toast{position:fixed;z-index:20;right:50%;bottom:75px;transform:translateX(50%);padding:10px 16px;border-radius:12px;background:#222820;color:white;font-size:12px;opacity:0;pointer-events:none;transition:opacity .2s}.toast.show{opacity:1}
+    @media(min-width:700px){body{background:#f0f2ef}.phone{width:520px;min-height:100vh;margin:auto;background:#fff;box-shadow:0 0 30px #0000000d}.bottom-nav{width:520px;right:50%;transform:translateX(50%)}}
+  </style>
+</head>
+<body>
+<div class="phone">
+  <div class="notice">ارسال رایگان برای خریدهای بالای ۲ میلیون تومان ✨</div>
+  <header><div class="wrap nav"><a class="brand" href="#home"><span class="mark">س</span> سپید</a><button class="icon" aria-label="جستجو" onclick="document.querySelector('#q').focus()">⌕</button><button class="icon cart" aria-label="سبد خرید" onclick="showCart()">🛍<span class="count" id="count">۰</span></button></div></header>
+  <main class="wrap" id="home">
+    <label class="search"><span>⌕</span><input id="q" type="search" placeholder="جستجوی محصولات..." aria-label="جستجوی محصولات"><button type="button" onclick="document.querySelector('#q').value='';filterProducts()">×</button></label>
+    <section class="hero"><div class="eyebrow">زیبایی در سادگی است</div><h1>انتخاب‌های خوب،<br>حال خوب می‌سازند.</h1><p>محصولاتی باکیفیت و دوست‌داشتنی برای زندگی روزمره.</p><a class="primary" href="#products">مشاهده محصولات ←</a><img class="hero-img" src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=900&q=85" alt="چیدمان مینیمال محصولات خانه"></section>
+    <div class="perks"><div class="perk"><span>🚚</span><div><b>ارسال سریع</b><small>به سراسر ایران</small></div></div><div class="perk"><span>↩️</span><div><b>ضمانت بازگشت</b><small>تا ۷ روز پس از خرید</small></div></div><div class="perk"><span>♧</span><div><b>تضمین کیفیت</b><small>با خیال راحت انتخاب کنید</small></div></div><div class="perk"><span>♡</span><div><b>پشتیبانی همراه</b><small>پاسخ‌گوی شما هستیم</small></div></div></div>
+    <section id="categories"><div class="section-title"><h2>دسته‌بندی‌ها</h2><span>مشاهده همه ←</span></div><div class="categories"><button class="chip active" data-filter="all">همه محصولات</button><button class="chip" data-filter="home">خانه و زندگی</button><button class="chip" data-filter="beauty">زیبایی و مراقبت</button><button class="chip" data-filter="accessory">اکسسوری</button></div></section>
+    <section id="products"><div class="section-title"><h2>منتخب این هفته</h2><span>محبوب‌ترین‌ها</span></div><div class="products" id="grid">
+      <article class="product" data-category="home" data-name="گلدان سرامیکی آوید"><img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=700&q=80" alt="گلدان سرامیکی" loading="lazy"><div class="info"><div class="category">خانه و زندگی</div><div class="name">گلدان سرامیکی آوید</div><div class="buy"><span class="price">۸۹۰٬۰۰۰ تومان</span><button class="add" aria-label="افزودن گلدان به سبد">+</button></div></div></article>
+      <article class="product" data-category="beauty" data-name="ست مراقبت پوست آرامش"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=80" alt="ست مراقبت پوست" loading="lazy"><div class="info"><div class="category">زیبایی و مراقبت</div><div class="name">ست مراقبت پوست آرامش</div><div class="buy"><span class="price">۱٬۲۵۰٬۰۰۰ تومان</span><button class="add" aria-label="افزودن ست مراقبت به سبد">+</button></div></div></article>
+      <article class="product" data-category="accessory" data-name="ساعت مینیمال سپهر"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80" alt="ساعت مینیمال" loading="lazy"><div class="info"><div class="category">اکسسوری</div><div class="name">ساعت مینیمال سپهر</div><div class="buy"><span class="price">۲٬۴۰۰٬۰۰۰ تومان</span><button class="add" aria-label="افزودن ساعت به سبد">+</button></div></div></article>
+      <article class="product" data-category="home" data-name="چراغ رومیزی مهتاب"><img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=80" alt="چراغ رومیزی" loading="lazy"><div class="info"><div class="category">خانه و زندگی</div><div class="name">چراغ رومیزی مهتاب</div><div class="buy"><span class="price">۱٬۷۹۰٬۰۰۰ تومان</span><button class="add" aria-label="افزودن چراغ به سبد">+</button></div></div></article>
+    </div></section>
+    <section class="promo"><div><div class="eyebrow">پیشنهاد ویژه سپید</div><h2>یک تغییر کوچک، یک حس تازه.</h2><p>برای خرید اول از ۱۵٪ تخفیف استفاده کنید.</p></div><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=500&q=80" alt="فضای آرام خانه" loading="lazy"></section>
+    <footer id="about"><b>سپید</b><p>همراه شما برای انتخاب محصولاتی ساده، باکیفیت و دوست‌داشتنی.</p><div>شنبه تا پنجشنبه، ۹ تا ۱۸ · ۰۲۱-۱۲۳۴۵۶۷۸</div></footer>
+  </main>
+  <nav class="bottom-nav" aria-label="ناوبری اصلی"><a class="selected" href="#home"><span>⌂</span><span>خانه</span></a><a href="#categories"><span>▦</span><span>دسته‌ها</span></a><a href="#products"><span>♧</span><span>محصولات</span></a><a href="#about"><span>♡</span><span>درباره ما</span></a></nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script>
+  let cart=0,timer;
+  const toast=(message)=>{const el=document.querySelector('#toast');el.textContent=message;el.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>el.classList.remove('show'),2200)};
+  document.querySelectorAll('.chip').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));button.classList.add('active');filterProducts()}));
+  function filterProducts(){const selected=document.querySelector('.chip.active').dataset.filter;const q=document.querySelector('#q').value.trim().toLocaleLowerCase('fa');document.querySelectorAll('.product').forEach(p=>{p.hidden=!(selected==='all'||p.dataset.category===selected)||!p.dataset.name.toLocaleLowerCase('fa').includes(q)})}
+  document.querySelector('#q').addEventListener('input',filterProducts);
+  document.querySelectorAll('.add').forEach(button=>button.addEventListener('click',()=>{cart++;document.querySelector('#count').textContent=new Intl.NumberFormat('fa-IR').format(cart);toast('محصول به سبد خرید اضافه شد.')}));
+  function showCart(){toast(cart?`تعداد ${new Intl.NumberFormat('fa-IR').format(cart)} محصول در سبد خرید است.`:'سبد خرید شما خالی است.')}
+</script>
+</body>
+</html>
