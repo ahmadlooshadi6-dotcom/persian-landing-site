@@ -3,19 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#1565c0">
   <title>ورود مستقیم به اینستاگرام</title>
   <style>
-    *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;padding:24px;display:grid;place-items:center;background:#f7f7f7;color:#222;font-family:Tahoma,Arial,sans-serif;line-height:1.9}
-    main{width:min(100%,440px);padding:32px 24px;background:#fff;border:1px solid #e8e8e8;border-radius:20px;text-align:center;box-shadow:0 12px 36px #0000000c}
-    .icon{width:64px;height:64px;margin:0 auto 16px;display:grid;place-items:center;border-radius:18px;background:linear-gradient(135deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);color:white;font-size:34px;font-weight:bold}
-    h1{margin:0 0 8px;font-size:24px}
-    p{margin:0 0 22px;color:#666;font-size:15px}
-    .button{display:block;width:100%;margin:12px 0;padding:13px 18px;border:0;border-radius:12px;background:#d62976;color:#fff;text-decoration:none;font-size:16px;font-weight:bold}
-    .button.secondary{background:#f0f0f0;color:#222}
-    .safe{margin-top:20px;padding:12px;border-radius:10px;background:#f6f8f6;color:#555;font-size:13px}
-    footer{margin-top:18px;color:#888;font-size:12px}
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eaf3ff;
+      color: #17324d;
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.9;
+    }
+
+    main {
+      width: 100%;
+      max-width: 440px;
+      padding: 32px 24px;
+      background: #fff;
+      border: 1px solid #d5e5f7;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 12px 36px rgba(21, 101, 192, 0.12);
+    }
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #42a5f5, #1565c0);
+      color: #fff;
+      font-size: 38px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: 24px; }
+    p { margin: 0 0 22px; color: #536b82; font-size: 15px; }
+
+    .button {
+      display: block;
+      width: 100%;
+      margin: 12px 0;
+      padding: 13px 18px;
+      border: 0;
+      border-radius: 12px;
+      background: #1565c0;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .button:hover, .button:focus { background: #0d47a1; }
+    .button.secondary { background: #e8f1fb; color: #174a7e; }
+    .button.secondary:hover, .button.secondary:focus { background: #d5e7fa; }
+
+    .safe {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 10px;
+      background: #f1f7fd;
+      color: #40566b;
+      font-size: 13px;
+    }
+
+    footer { margin-top: 18px; color: #6b7f91; font-size: 12px; }
+
+    @media (max-width: 480px) {
+      body { padding: 16px; }
+      main { padding: 26px 18px; }
+      h1 { font-size: 21px; }
+    }
   </style>
 </head>
 <body>
@@ -25,7 +91,7 @@
     <p>برای ورود امن، از دکمهٔ زیر وارد وب‌سایت رسمی اینستاگرام شوید.</p>
     <a class="button" href="https://www.instagram.com/accounts/login/" rel="noopener noreferrer">ورود به اینستاگرام</a>
     <a class="button secondary" href="https://www.instagram.com/najmeh.ahmadloo/" rel="noopener noreferrer">مشاهدهٔ صفحهٔ نمایه</a>
-    <div class="safe">رمز عبور و کد تأیید خود را فقط در برنامه یا دامنهٔ رسمی <b>instagram.com</b> وارد کنید. این صفحه اطلاعات ورود شما را دریافت یا ذخیره نمی‌کند.</div>
+    <div class="safe">رمز عبور و کد تأیید خود را فقط در برنامه یا دامنهٔ رسمی <b>instagram.com</b> وارد کنید. این صفحه اطلاعات ورود شما را ذخیره نمی‌کند.</div>
     <footer>این صفحه مستقل است و وابسته یا مورد تأیید اینستاگرام نیست.</footer>
   </main>
 </body>
